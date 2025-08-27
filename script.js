@@ -49,7 +49,6 @@ registerForm.addEventListener('submit', (e) => {
   const username = document.getElementById('regUsername').value.trim();
   const password = regPassword.value;
   const confirmPassword = regConfirmPassword.value;
-  const profilePic = document.getElementById('regProfile').value.trim() || 'https://via.placeholder.com/80';
 
   if(password !== confirmPassword) {
     regMessage.style.color = 'red';
@@ -66,17 +65,16 @@ registerForm.addEventListener('submit', (e) => {
       return;
     }
 
-    users.push({ username, password, profilePic });
+    users.push({ username, password });
     localStorage.setItem('users', JSON.stringify(users));
-
-    localStorage.setItem('currentUser', JSON.stringify({ username, profilePic }));
 
     regMessage.style.color = 'green';
     regMessage.textContent = "Registration successful! Redirecting...";
+    registerForm.reset();
 
     setTimeout(() => {
-      window.location.href = "dashboard.html";
-    }, 1000);
+      window.location.href = "https://ravindu-rv.github.io/STUDENT-HUB/";
+    }, 1500);
   }
 });
 
@@ -90,13 +88,12 @@ loginForm.addEventListener('submit', (e) => {
   const user = users.find(u => u.username === username && u.password === password);
 
   if(user) {
-    localStorage.setItem('currentUser', JSON.stringify({ username: user.username, profilePic: user.profilePic }));
-
     loginMessage.style.color = 'green';
     loginMessage.textContent = "Login successful! Redirecting...";
+    loginForm.reset();
 
     setTimeout(() => {
-      window.location.href = "dashboard.html";
+      window.location.href = "https://ravindu-rv.github.io/STUDENT-HUB/";
     }, 1000);
   } else {
     loginMessage.style.color = 'red';
