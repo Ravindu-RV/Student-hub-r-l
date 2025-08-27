@@ -15,5 +15,5 @@ if(currentUser) {
 // Logout
 logout.addEventListener('click', () => {
   localStorage.removeItem('currentUser');
-  window.location.href = "index.html";
+  window.location.href = "https://ravindu-rv.github.io/STUDENT-HUB/";
 });
