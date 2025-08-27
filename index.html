@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- LOGIN FORM -->
+    <div class="form-container" id="loginContainer">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" placeholder="Enter username" required>
+
+        <label for="loginPassword">Password:</label>
+        <div class="password-container">
+          <input type="password" id="loginPassword" placeholder="Enter password" required>
+          <span class="toggle-password" id="toggleLoginPassword">👁️</span>
+        </div>
+
+        <button type="submit">Login</button>
+        <p id="loginMessage"></p>
+        <p class="switch-form">Don't have an account? <span id="showRegister">Register here</span></p>
+      </form>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <div class="form-container" id="registerContainer" style="display:none;">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <label for="regUsername">Username:</label>
+        <input type="text" id="regUsername" placeholder="Enter username" required>
+
+        <label for="regPassword">Password:</label>
+        <div class="password-container">
+          <input type="password" id="regPassword" placeholder="Enter password" required>
+          <span class="toggle-password" id="toggleRegPassword">👁️</span>
+        </div>
+
+        <label for="regConfirmPassword">Confirm Password:</label>
+        <div class="password-container">
+          <input type="password" id="regConfirmPassword" placeholder="Confirm password" required>
+          <span class="toggle-password" id="toggleRegConfirmPassword">👁️</span>
+        </div>
+
+        <button type="submit">Register</button>
+        <p id="regMessage"></p>
+        <p class="switch-form">Already have an account? <span id="showLogin">Login here</span></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
