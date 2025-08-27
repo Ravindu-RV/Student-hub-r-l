@@ -30,16 +30,19 @@
     </main>
   </div>
 
-  <script src="dashboard.js">// Inside login success:
+  <script src="dashboard.js">// REGISTER SUCCESS
 setTimeout(() => {
-  localStorage.setItem("loggedInUser", JSON.stringify(user));
+  const userData = { username, password };  // store username + password
+  localStorage.setItem("loggedInUser", JSON.stringify(userData));
+  window.location.href = "dashboard.html";
+}, 1500);
+
+// LOGIN SUCCESS
+setTimeout(() => {
+  const loggedUser = { username: usernameInput, password: passwordInput };
+  localStorage.setItem("loggedInUser", JSON.stringify(loggedUser));
   window.location.href = "dashboard.html";
 }, 1000);
-
-// Inside register success:
-setTimeout(() => {
-  localStorage.setItem("loggedInUser", JSON.stringify({ username, password }));
-  window.location.href = "dashboard.html";
-}, 1500);</script>
+</script>
 </body>
 </html>
