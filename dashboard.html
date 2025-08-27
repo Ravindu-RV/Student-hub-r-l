@@ -30,19 +30,7 @@
     </main>
   </div>
 
-  <script src="dashboard.js">// REGISTER SUCCESS
-setTimeout(() => {
-  const userData = { username, password };  // store username + password
-  localStorage.setItem("loggedInUser", JSON.stringify(userData));
-  window.location.href = "dashboard.html";
-}, 1500);
-
-// LOGIN SUCCESS
-setTimeout(() => {
-  const loggedUser = { username: usernameInput, password: passwordInput };
-  localStorage.setItem("loggedInUser", JSON.stringify(loggedUser));
-  window.location.href = "dashboard.html";
-}, 1000);
+  <script src="dashboard.js">
 </script>
 </body>
 </html>
