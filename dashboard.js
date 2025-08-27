@@ -10,7 +10,7 @@ if (!user) {
 document.getElementById("usernameDisplay").textContent = user.username;
 document.getElementById("mainUsername").textContent = user.username;
 
-// Optional: set profile pic (default if none uploaded)
+// Optional profile pic
 if (user.profilePic) {
   document.getElementById("profilePic").src = user.profilePic;
 }
