@@ -73,7 +73,7 @@ registerForm.addEventListener('submit', (e) => {
     registerForm.reset();
 
     setTimeout(() => {
-      window.location.href = "dashboard.html";
+      window.location.href = "https://ravindu-rv.github.io/STUDENT-HUB/";
     }, 1500);
   }
 });
@@ -93,7 +93,7 @@ loginForm.addEventListener('submit', (e) => {
     loginForm.reset();
 
     setTimeout(() => {
-      window.location.href = "dashboard.html";
+      window.location.href = "https://ravindu-rv.github.io/STUDENT-HUB/";
     }, 1000);
   } else {
     loginMessage.style.color = 'red';
