@@ -3,25 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-  <div class="dashboard-container">
-    <div class="sidebar">
-      <img id="profilePic" src="" alt="Profile Picture">
-      <h3 id="username">Username</h3>
-      <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Settings</li>
-        <li id="logout">Logout</li>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img id="profilePic" src="https://via.placeholder.com/80" alt="Profile Picture">
+        <h3 id="usernameDisplay">User</h3>
+      </div>
+      <ul class="menu">
+        <li><a href="#">🏠 Home</a></li>
+        <li><a href="#">📚 Courses</a></li>
+        <li><a href="#">📊 Reports</a></li>
+        <li><a href="#">⚙️ Settings</a></li>
+        <li><a id="logoutBtn" href="#">🚪 Logout</a></li>
       </ul>
-    </div>
-    <div class="main-content">
-      <h1>Welcome to your Dashboard</h1>
-      <p>This is your main dashboard content.</p>
-    </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1>Welcome, <span id="mainUsername">User</span> 👋</h1>
+      <p>This is your personal dashboard. You can customize it further.</p>
+    </main>
   </div>
 
   <script src="dashboard.js"></script>
