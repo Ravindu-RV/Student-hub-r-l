@@ -1,19 +1,22 @@
-// Load current user from localStorage
-const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-const profilePic = document.getElementById('profilePic');
-const username = document.getElementById('username');
-const logout = document.getElementById('logout');
+// Load user data from localStorage
+const user = JSON.parse(localStorage.getItem("loggedInUser"));
 
-if(currentUser) {
-  profilePic.src = currentUser.profilePic;
-  username.textContent = currentUser.username;
-} else {
-  // If no user logged in, redirect to login page
+// If not logged in, redirect to login
+if (!user) {
   window.location.href = "index.html";
 }
 
+// Show username in sidebar & main
+document.getElementById("usernameDisplay").textContent = user.username;
+document.getElementById("mainUsername").textContent = user.username;
+
+// Optional: set profile pic (default if none uploaded)
+if (user.profilePic) {
+  document.getElementById("profilePic").src = user.profilePic;
+}
+
 // Logout
-logout.addEventListener('click', () => {
-  localStorage.removeItem('currentUser');
+document.getElementById("logoutBtn").addEventListener("click", () => {
+  localStorage.removeItem("loggedInUser");
   window.location.href = "index.html";
 });
