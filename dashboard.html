@@ -30,6 +30,16 @@
     </main>
   </div>
 
-  <script src="dashboard.js"></script>
+  <script src="dashboard.js">// Inside login success:
+setTimeout(() => {
+  localStorage.setItem("loggedInUser", JSON.stringify(user));
+  window.location.href = "dashboard.html";
+}, 1000);
+
+// Inside register success:
+setTimeout(() => {
+  localStorage.setItem("loggedInUser", JSON.stringify({ username, password }));
+  window.location.href = "dashboard.html";
+}, 1500);</script>
 </body>
 </html>
